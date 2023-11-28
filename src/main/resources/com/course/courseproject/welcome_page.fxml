@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" scaleShape="false" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.WelcomeController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Media/bckgr.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="440.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Media/logo640_ruby_new.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="mainLbl" layoutX="451.0" layoutY="239.0" text="НОВЫЕ СОБЫТИЯ УЖЕ В ИГРЕ" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="welcomeBtn" alignment="CENTER" layoutX="490.0" layoutY="594.0" mnemonicParsing="false" onAction="#onWelcomeBtnClick" prefHeight="85.0" prefWidth="300.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: white; -fx-border-radius: 10px; -fx-border-width: 3px;" text="УЗНАТЬ ПОДРОБНЕЕ" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

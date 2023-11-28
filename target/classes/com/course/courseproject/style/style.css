@@ -1,0 +1,8 @@
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 0,0,0,2.5 );
+}
+
+.btnInfo {
+    -fx-background-color: rgba(20,0,40,1)
+}

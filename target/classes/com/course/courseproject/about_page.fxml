@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="920.0" prefWidth="1294.401" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.AboutController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3490.0" prefWidth="1280.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/autumn_tourney_615x346-transformed.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="sh" fitHeight="720.0" fitWidth="1280.0" layoutY="858.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/main_bg.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="wdr" fitHeight="720.0" fitWidth="1280.0" layoutY="1714.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/well_deserved_award_615x346.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="kb" fitHeight="720.0" fitWidth="1280.0" layoutY="2570.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/kb_2023_615x346-transformed.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                   <ImageView fitHeight="400.0" fitWidth="1280.0" layoutY="588.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                         <Image url="@Media/tranlate1.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="400.0" fitWidth="1280.0" layoutY="1445.6" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                         <Image url="@Media/tranlate2.jpg" />
+                      </image>
+                   </ImageView>
+                   <ImageView fitHeight="400.0" fitWidth="1280.0" layoutY="2302.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                         <Image url="@Media/tranlate3.jpg" />
+                      </image>
+                   </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="920.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fitHeight="480.0" fitWidth="450.0" layoutX="460.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/logo_ls_v1.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="l7Btn" layoutX="463.0" layoutY="116.0" mnemonicParsing="false" onAction="#onl7BtnClick" opacity="0.0" prefHeight="470.0" prefWidth="350.0" />
+                  <Label alignment="TOP_CENTER" layoutX="214.0" layoutY="66.0" prefHeight="50.0" prefWidth="850.0" text="ТУРНИР С ДИНАМИЧЕСКИМ ПРИЗОВЫМ ФОНДОМ!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutY="768.0" prefHeight="40.0" prefWidth="1280.0" text="УНИКАЛЬНЫЙ КИБЕРСПОРТИВНЫЙ ТУРНИР ДЛЯ КАЖДОГО ИГРОКА!" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="697.0" prefHeight="165.0" prefWidth="1260.0" text="ПРИЗОВОЙ ФОНД ПОПОЛНЯЕТСЯ С КАЖДОЙ ПРОДАЖЕЙ НОВОГО УНИКАЛЬНОГО 2D-СТИЛЯ «ГОЛОС ПУСТЫНИ». Весь доход, полученный с продажи набора, будет добавлен в призовой фонд «Легендарной семёрки»." textAlignment="CENTER" textFill="#fffad2" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="920.0" prefHeight="920.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="565.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/bg4.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="15.0" layoutY="640.0" text="ВСЕ ЗАВИСИТ ТОЛЬКО ОТ ТЕБЯ НА ПОЛЕ БОЯ!" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="261.0" layoutY="690.0" text="РАЗЛИЧНЫЕ ВЕТКИ ПРОКАЧКИ КАЖДОЙ ТЕХНИКИ" textAlignment="CENTER" textFill="WHITE" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="596.0" layoutY="740.0" text="ДИНАМИЧЕСКАЯ ЗОНА БОЕВЫХ ДЕЙСТВИЙ." textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="274.0" layoutY="55.0" prefHeight="40.0" prefWidth="730.0" text="ОБНОВЛЕННЫЙ РЕЖИМ &quot;СТАЛЬНОЙ ОХОТНИК&quot;" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="140.0" layoutY="695.0" prefHeight="50.0" prefWidth="1000.0" text="ОБШИРНЫЙ ПАРК ТЕХНИКИ НЕ НУЖЕН. ПРОСТО ИГРАЙ!" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="1840.0" prefHeight="920.0" prefWidth="1280.0">
+               <children>
+                  <Label layoutX="256.0" layoutY="610.0" text="ПОЛУЧАЙ ПРИЯТНЫЕ НАГРАДЫ ЗА ВЫСЛУГУ ЛЕТ!" textAlignment="CENTER" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="670.0" text="ОТ ВЕТЕРАНА ДО НОВИЧКА. КАЖДЫЙ ПОЛУЧИТ СВОЮ ЗАСЛУЖЕННУЮ НАГРАДУ!" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="244.0" text="ЗАСЛУЖЕННАЯ НАГРАДА ДЛЯ КАЖДОГО ТАНКИСТА!" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="645.0" prefHeight="50.0" prefWidth="1100.0" text="В ЭТОМ ГОДУ ВСЕ ПОЛУЧАТ МНОЖЕСТВО ЦЕННЫХ ПРИЗОВ" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="2570.0" prefHeight="920.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="1280.0" layoutY="720.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/bg_kb.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="40.0" layoutY="770.0" prefHeight="100.0" prefWidth="1200.0" text="ИСПОЛЬЗУЙ НАКОПЛЕННЫЕ РЕСУРСЫ ДЛЯ ПОЛУЧЕНИЯ УНИКАЛЬНЫХ ТАНКОВ X УРОВНЯ!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="348.0" layoutY="750.0" text="ПРОКАЧАЛ ВСЕ &quot;ДЕСЯТКИ&quot;? НЕ БЕДА!" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="438.0" layoutY="65.0" text="КОНСТРУКТОРСКОЕ БЮРО" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
