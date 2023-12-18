@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.InfoPageL7Controller">
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.InfoPageL7Controller">
    <children>
       <Pane prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: rgb(0,0,0,1);">
          <children>
-            <Button layoutX="5.0" layoutY="5.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="← Назад" textFill="WHITE">
+            <Button fx:id="l7Feedback" layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onL7FeedbackClick" prefHeight="50.0" prefWidth="165.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Оставить отзыв" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="390.0" layoutY="5.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="На главную" textFill="WHITE">
+            <Button fx:id="l7Main" layoutX="390.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onL7MainClick" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="На главную" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="l7Author" layoutX="900.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onL7AuthorClick" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Об авторе" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="l7Forward" layoutX="1090.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onL7ForwardClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Следующая →" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>

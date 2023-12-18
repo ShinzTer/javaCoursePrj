@@ -1,31 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.InfoPageL7Controller">
+<VBox prefHeight="780.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.InfoPageShController">
    <children>
       <Pane prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: rgb(0,0,0,1);">
          <children>
-            <Button layoutX="5.0" layoutY="5.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="← Назад" textFill="WHITE">
+            <Button fx:id="shBack" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShBackClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="← Предыдущая" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="390.0" layoutY="5.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="На главную" textFill="WHITE">
+            <Button fx:id="shFeedback" layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShFeedbackClick" prefHeight="50.0" prefWidth="165.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Оставить отзыв" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="shMain" layoutX="390.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShMainClick" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="На главную" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="shAuthor" layoutX="900.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShAuthorClick" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Об авторе" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="shForward" layoutX="1090.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShForwardClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Следующая →" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <ScrollPane prefHeight="720.0" prefWidth="1294.401" vvalue="0.93">
+      <ScrollPane prefHeight="720.0" prefWidth="1294.401" vvalue="1.0">
          <content>
             <VBox prefHeight="1400.0" prefWidth="1280.0" style="-fx-background-color: rgb(0,0,0,1);">
                <children>
@@ -50,37 +61,32 @@
                               <Image url="@Media/portal_background_MT_800.jpg" />
                            </image>
                         </ImageView>
-                        <Label layoutX="75.0" layoutY="50.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="Соревновательный режим для солло игроков «»" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="30.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="Режим в жанре «Королевская битва» возвращается! Сражайтесь в одиночку или во взводе на специальных машинах до последнего выжившего" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="Arial" size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="100.0" layoutY="140.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="* — Призовой фонд турнира пополнялся с каждой покупки набора со стилем «Голос пустыни»." textFill="#ffad2a">
-                           <font>
-                              <Font name="Arial" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="80.0" fitWidth="1280.0" layoutX="49.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="80.0" fitWidth="1280.0" layoutX="49.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@Media/textBorder.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="75.0" layoutY="290.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Каждая сплочённая семёрка игроков была способна выйти на LAN-финал с призовым фондом более чем 5.4 миллиона рублей" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="250.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Каждый игрок сможет показать себя, даже если он играет нестабильно - из всех боёв будут выбраны всего 20 лучших, по которым и определится место в таблице призёров" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="400.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Бои происходят в формате 7х7 на картах с режимом боя Атака/Оборона, где карты и сторона начала известны заранее. Продумывайте тактики, подбирайте составы из 7 машин и сражайтесь за звание «Легендарной семёрки»" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="360.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Бои происходят на трёх картах режима. 3 на 3 километра между двадцатью игроками. Побеждает тот, кто сможет вовремя проявить агрессию и, в тоже время, продолжит внимательно смотреть по сторонам" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="550.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- В турнире стоит запрет на любую наградную технику. Все восстребованные в режиме танки может получить любой игрок, их лишь нужно прокачать" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="510.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- С каждым патчем в режиме обновляется цепочка общих и ежедневных задач. Что бы пройти общую цепочку задач, нужно накопить стальные печати. Они в свою очередь являются дополнительной наградой каждого из 4-х ежедневных заданий разного уровня сложности" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="660.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Игроки, которые не смогли собрать команду из 7 человек также смогут попробовать свои силы в одиночном режиме «Стальной охотник». Призовой фонд режима конечно в разы скромнее, но тут всё зависит только от вас, командир!" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="650.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Так же в режим можно играть и вмсесте со своим напарником. Бои будут проходить немного по другим правилам: Всего на карту выходят 10 взводов по 2 игрока; Задачи ежедневной прогрессии будут адаптированы под взводный формат." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>

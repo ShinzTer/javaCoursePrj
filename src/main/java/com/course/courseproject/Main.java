@@ -14,6 +14,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("welcome_page.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         stage.setTitle("Мир Танков");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }

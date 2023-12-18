@@ -17,7 +17,6 @@ public class WelcomeController {
 
     @FXML
     protected void onWelcomeBtnClick() {
-        welcomeBtn.setOnAction(event -> {
             welcomeBtn.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
@@ -31,9 +30,8 @@ public class WelcomeController {
 
             Parent root = loader.getRoot();
             Stage stage = new Stage();
-            stage.setScene(new Scene(root, 1294.401, 720));
-            stage.showAndWait();
-        });
+            stage.setScene(new Scene(root, 1294.401, 820));
+            stage.setResizable(false);
+            stage.show();
     }
-
 }

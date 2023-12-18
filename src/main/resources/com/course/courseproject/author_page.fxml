@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="625.0" prefWidth="1000.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.AuthorPageController">
+   <children>
+      <ImageView fitHeight="625.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Media/portal_background_MT_800.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="299.0" layoutY="14.0" text="Информация об авторе:" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="125.0" text="Студент третьего курса УО &quot;ВГТУ&quot;">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="175.0" text="Скубанович Даниил Игоревич">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="225.0" text="Группа: Ит-11">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="475.0" text="*Некоторые медиа файлы были взяты с сайта игры &quot;Мир танков&quot; Lesta Games">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="325.0" text="Проект: Рекламное Приложение для игры &quot;Танки&quot;">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="mainBtn" layoutX="200.0" layoutY="535.0" mnemonicParsing="false" onMouseClicked="#onMainBtnClick" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: white; -fx-border-radius: 10px; -fx-border-width: 3px;" text="На главную" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="feedbackBtn" layoutX="550.0" layoutY="535.0" mnemonicParsing="false" onMouseClicked="#onFeedbackBtn" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: white; -fx-border-radius: 10px; -fx-border-width: 3px;" text="Обратная связь" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

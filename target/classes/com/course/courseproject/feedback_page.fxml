@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1294.401" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.FeedbackController">
+   <content>
+      <VBox prefHeight="950.0" prefWidth="1280.0">
+         <children>
+            <Pane prefHeight="150.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/portal_art_engineering_1920x225_lg_spb_mt_Tb6Eaya.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="147.0" layoutY="35.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,1) , 1,1,0,2.5 );;" text="Пожалуйста, оставьте свой отзыв для улучшения данного приложения">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font></Label>
+               </children></Pane>
+            <Pane prefHeight="800.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fitHeight="800.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Media/portal_background_MT_800.jpg" />
+                     </image></ImageView>
+                  <Label layoutX="15.0" layoutY="15.0" prefWidth="1250.0" text="1. Оцените работу программы по шкале от 0 до 5, где 0 - программа сделана плохо и материал вас не заинтересовал, а 5 - программа сделана хорошо и вы заинтересовались материалом" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="rb1" layoutX="15.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#isChosen" text="0" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="question1" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rb2" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#isChosen" text="1" textFill="WHITE" toggleGroup="$question1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rb3" layoutX="185.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#isChosen" text="2" textFill="WHITE" toggleGroup="$question1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rb4" layoutX="270.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#isChosen" text="3" textFill="WHITE" toggleGroup="$question1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rb5" layoutX="355.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#isChosen" text="4" textFill="WHITE" toggleGroup="$question1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rb6" layoutX="440.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#isChosen" text="5" textFill="WHITE" toggleGroup="$question1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <Label layoutX="15.0" layoutY="150.0" text="2. Оцените наполнение страницы &quot;Легендарная семерка&quot;" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAreaL7" layoutX="15.0" layoutY="195.0" prefHeight="60.0" prefWidth="1250.0" wrapText="true" />
+                  <Label layoutX="15.0" layoutY="270.0" text="3. Оцените наполнение страницы &quot;Стальной охотник&quot;" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAreaSh" layoutX="15.0" layoutY="315.0" prefHeight="60.0" prefWidth="1250.0" />
+                  <Label layoutX="15.0" layoutY="390.0" text="4. Оцените наполнение страницы &quot;Заслуженная награда&quot;" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAreaWdr" layoutX="15.0" layoutY="435.0" prefHeight="60.0" prefWidth="1250.0" />
+                  <Label layoutX="15.0" layoutY="510.0" text="5. Оцените наполнение страницы &quot;Конструкторское бюро&quot;" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAreaKb" layoutX="15.0" layoutY="555.0" prefHeight="60.0" prefWidth="1250.0" />
+                  <Label layoutX="15.0" layoutY="630.0" text="6. Какая из представленных страниц вам понравилась больше всего?">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="rbFavourite1" layoutX="25.0" layoutY="670.0" mnemonicParsing="false" onMouseClicked="#isFavouriteChosen" text="&quot;Легендарная семерка&quot;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="question6" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rbFavourite2" layoutX="275.0" layoutY="670.0" mnemonicParsing="false" onMouseClicked="#isFavouriteChosen" text="&quot;Стальной охотник&quot;" textFill="WHITE" toggleGroup="$question6">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rbFavourite3" layoutX="495.0" layoutY="670.0" mnemonicParsing="false" onMouseClicked="#isFavouriteChosen" text="&quot;Заслуженная награда&quot;" textFill="WHITE" toggleGroup="$question6">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rbFavourite4" layoutX="745.0" layoutY="670.0" mnemonicParsing="false" onMouseClicked="#isFavouriteChosen" text="&quot;Конструкторское бюро&quot;" textFill="WHITE" toggleGroup="$question6">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <Button fx:id="sendFeedbackBtn" layoutX="15.0" layoutY="705.0" mnemonicParsing="false" onMouseClicked="#onSendFeedbackBtnClick" prefHeight="75.0" prefWidth="1250.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-color: white; -fx-border-radius: 10px; -fx-border-width: 3px;" text="Отправить отзыв" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+         </children></VBox>
+   </content>
+</ScrollPane>
