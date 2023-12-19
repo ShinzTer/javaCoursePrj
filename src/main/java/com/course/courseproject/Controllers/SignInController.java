@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -30,6 +31,9 @@ public class SignInController {
     protected Button loginBtn;
 
     @FXML
+    protected Label incorrectLabel, emptyField1, emptyField2;
+
+    @FXML
     protected void signUpBtnClicked() {
         toSignUpBtn.getScene().getWindow().hide();
         FXMLLoader loader = new FXMLLoader();
@@ -50,10 +54,19 @@ public class SignInController {
 
     @FXML
     protected void loginBtnClicked() throws SQLException {
+        incorrectLabel.setVisible(false);
+        emptyField1.setVisible(false);
+        emptyField2.setVisible(false);
         String userLogin = loginField.getText().trim();
         String userPassword = passField.getText().trim();
 
-        if(!userLogin.equals("") && !userPassword.equals(""))
+        if(userLogin.isEmpty()){
+            emptyField1.setVisible(true);
+        }
+        if (userPassword.isEmpty()){
+            emptyField2.setVisible(true);
+        }
+        if(!userLogin.isEmpty() && !userPassword.isEmpty())
             loginUser(userLogin, userPassword);
         else
             System.out.println("Incorrect Login or Password!");
@@ -99,6 +112,8 @@ public class SignInController {
             FeedbackController fbController = loader.getController();
             fbController.getUser(user);
             stage.show();
+        }else {
+            incorrectLabel.setVisible(true);
         }
     }
 }

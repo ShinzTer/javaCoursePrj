@@ -3,3 +3,13 @@
     -fx-text-fill: #ffffff;
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 0,0,0,2.5 );
 }
+
+#emptyField1, #emptyField2, #incorrectLabel {
+    -fx-text-fill: #ff0000;
+    -fx-font-family:  Roboto Condensed,Arial Narrow,Arial,sans-serif;
+}
+
+#emptyField1, #emptyField2, #incorrectLabel {
+    -fx-text-fill: #ff0000;
+    -fx-font-family:  Roboto Condensed,Arial Narrow,Arial,sans-serif;
+}
