@@ -59,51 +59,75 @@ public class DatabaseHandler extends Configs {
     //---------------------------------------------------FEEDBACK-------------------------------------------------------
 
     public void sendFeedback(Feedback feedback) {
-        String insert = "INSERT INTO " + FeedbackConst.FEEDBACK_TABLE + "("
-                + FeedbackConst.FEEDBACK_ID + "," + FeedbackConst.FEEDBACK_Q1 + ","
-                + FeedbackConst.FEEDBACK_Q2 + "," + FeedbackConst.FEEDBACK_Q3 + ","
-                + FeedbackConst.FEEDBACK_Q4 + "," + FeedbackConst.FEEDBACK_Q5 + ","
-                + FeedbackConst.FEEDBACK_Q6 + ")" + "VALUES(?,?,?,?,?,?,?)";
 
-        try {
-            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
-            prSt.setInt(1, feedback.getIduser());
-            prSt.setInt(2, feedback.getQ1());
-            prSt.setString(3, feedback.getQ2());
-            prSt.setString(4, feedback.getQ3());
-            prSt.setString(5, feedback.getQ4());
-            prSt.setString(6, feedback.getQ5());
-            prSt.setInt(7, feedback.getQ6());
+        boolean isExist = getFeedbackById(feedback);
 
-            prSt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+        if (!isExist) {
+            String insert = "INSERT INTO " + FeedbackConst.FEEDBACK_TABLE + "("
+                    + FeedbackConst.FEEDBACK_ID + "," + FeedbackConst.FEEDBACK_Q1 + ","
+                    + FeedbackConst.FEEDBACK_Q2 + "," + FeedbackConst.FEEDBACK_Q3 + ","
+                    + FeedbackConst.FEEDBACK_Q4 + "," + FeedbackConst.FEEDBACK_Q5 + ","
+                    + FeedbackConst.FEEDBACK_Q6 + ")" + "VALUES(?,?,?,?,?,?,?)";
+
+            try {
+                PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+                prSt.setInt(1, feedback.getIduser());
+                prSt.setInt(2, feedback.getQ1());
+                prSt.setString(3, feedback.getQ2());
+                prSt.setString(4, feedback.getQ3());
+                prSt.setString(5, feedback.getQ4());
+                prSt.setString(6, feedback.getQ5());
+                prSt.setInt(7, feedback.getQ6());
+
+                prSt.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (isExist) {
+            String insert = "UPDATE " + FeedbackConst.FEEDBACK_TABLE + " SET "
+                    + FeedbackConst.FEEDBACK_ID + "=?," + FeedbackConst.FEEDBACK_Q1 + "=?,"
+                    + FeedbackConst.FEEDBACK_Q2 + "=?," + FeedbackConst.FEEDBACK_Q3 + "=?,"
+                    + FeedbackConst.FEEDBACK_Q4 + "=?," + FeedbackConst.FEEDBACK_Q5 + "=?,"
+                    + FeedbackConst.FEEDBACK_Q6 + "=? WHERE " + FeedbackConst.FEEDBACK_ID + "=?";
+
+            try {
+                PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+                prSt.setInt(1, feedback.getIduser());
+                prSt.setInt(8, feedback.getIduser());
+                prSt.setInt(2, feedback.getQ1());
+                prSt.setString(3, feedback.getQ2());
+                prSt.setString(4, feedback.getQ3());
+                prSt.setString(5, feedback.getQ4());
+                prSt.setString(6, feedback.getQ5());
+                prSt.setInt(7, feedback.getQ6());
+
+                prSt.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
-//    public ResultSet getUserFeedback(User user) {
-//        ResultSet resSet = null;
-//        String id = String.valueOf(user.getIdUser());
-//
-//        String select = "SELECT * FROM " + FeedbackConst.FEEDBACK_TABLE + " WHERE " +
-//            FeedbackConst.FEEDBACK_ID + "=" + id;
-//
-//        Feedback feedback = new Feedback();
-//
-//        try {
-//            PreparedStatement prSt = getDbConnection().prepareStatement(select);
-//            prSt.setInt(1, user.get());
-//            prSt.setString(2, user.getPassword());
-//
-//            resSet = prSt.executeQuery();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//        return resSet;
-//    }
+    public boolean getFeedbackById(Feedback feedback) {
+        String select = "SELECT * FROM " + FeedbackConst.FEEDBACK_TABLE + " WHERE " +
+                FeedbackConst.FEEDBACK_ID + "=?";
+
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setInt(1, feedback.getIduser());
+            ResultSet resultSet = prSt.executeQuery();
+            if (resultSet.next()) {
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        return false;
+    }
 }

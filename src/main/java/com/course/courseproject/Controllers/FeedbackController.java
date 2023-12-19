@@ -26,9 +26,14 @@ public class FeedbackController {
     protected int chosen = 0;
     protected int favouriteChosen = 0;
     protected User user;
+    protected Feedback feedback;
 
     protected void getUser(User user) {
         this.user = user;
+    }
+
+    protected void getFeedback(Feedback feedback) {
+        this.feedback = feedback;
     }
 
     @FXML
@@ -50,17 +55,17 @@ public class FeedbackController {
     @FXML
     protected void onSendFeedbackBtnClick() {
         DatabaseHandler dbHandler = new DatabaseHandler();
-        Feedback feedback = new Feedback();
+        Feedback fb = new Feedback();
 
-        feedback.setIduser(user.getIdUser());
-        feedback.setQ1(chosen);
-        feedback.setQ2(textAreaL7.getText());
-        feedback.setQ3(textAreaSh.getText());
-        feedback.setQ4(textAreaWdr.getText());
-        feedback.setQ5(textAreaKb.getText());
-        feedback.setQ6(favouriteChosen);
+        fb.setIduser(user.getIdUser());
+        fb.setQ1(chosen);
+        fb.setQ2(textAreaL7.getText());
+        fb.setQ3(textAreaSh.getText());
+        fb.setQ4(textAreaWdr.getText());
+        fb.setQ5(textAreaKb.getText());
+        fb.setQ6(favouriteChosen);
 
-        dbHandler.sendFeedback(feedback);
+        dbHandler.sendFeedback(fb);
 
         sendFeedbackBtn.setText("Спасибо за ваш отзыв!");
         sendFeedbackBtn.setOnMouseClicked(e -> {

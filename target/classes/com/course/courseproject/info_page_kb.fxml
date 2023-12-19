@@ -39,7 +39,7 @@
                      <children>
                         <ImageView fitHeight="600.0" fitWidth="1280.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Media/assembly_shop_%233_1920x900.jpg" />
+                              <Image url="@Media/assembly_shop_3_1920x900.jpg" />
                            </image>
                         </ImageView>
                         <Label alignment="TOP_LEFT" layoutX="75.0" layoutY="460.0" prefHeight="110.0" prefWidth="760.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="Конструкторское бюро: Кратко о главном Особенности события" textFill="WHITE" wrapText="true">
