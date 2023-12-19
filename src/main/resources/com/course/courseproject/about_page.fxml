@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="920.0" prefWidth="1294.401" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.AboutController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="920.0" prefWidth="1294.401" scaleShape="false" stylesheets="@style/style.css" vvalue="1.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.AboutController">
   <content>
     <Pane minHeight="0.0" minWidth="0.0" prefHeight="3490.0" prefWidth="1280.0">
          <children>
@@ -62,17 +62,17 @@
                   <Button fx:id="l7Btn" layoutX="463.0" layoutY="116.0" mnemonicParsing="false" onAction="#onl7BtnClick" opacity="0.0" prefHeight="470.0" prefWidth="350.0" />
                   <Label alignment="TOP_CENTER" layoutX="121.0" layoutY="74.0" text="ТУРНИР С ДИНАМИЧЕСКИМ ПРИЗОВЫМ ФОНДОМ!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font name="Arial Narrow Bold" size="40.0" />
+                        <Font size="40.0" />
                      </font>
                   </Label>
                   <Label alignment="CENTER" layoutY="767.0" prefWidth="1280.0" text="УНИКАЛЬНЫЙ КИБЕРСПОРТИВНЫЙ ТУРНИР ДЛЯ КАЖДОГО ИГРОКА!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font name="Arial Narrow Bold" size="40.0" />
+                        <Font size="40.0" />
                      </font>
                   </Label>
                   <Label layoutX="10.0" layoutY="697.0" prefHeight="165.0" prefWidth="1260.0" text="ПРИЗОВОЙ ФОНД ПОПОЛНЯЕТСЯ С КАЖДОЙ ПРОДАЖЕЙ НОВОГО УНИКАЛЬНОГО 2D-СТИЛЯ «ГОЛОС ПУСТЫНИ». Весь доход, полученный с продажи набора, будет добавлен в призовой фонд «Легендарной семёрки»." textAlignment="CENTER" textFill="#fffad2" visible="false" wrapText="true">
                      <font>
-                        <Font name="Arial Narrow Bold" size="26.0" />
+                        <Font size="26.0" />
                      </font>
                   </Label>
                </children>
@@ -90,46 +90,46 @@
                   </Button>
                   <Label layoutX="15.0" layoutY="640.0" text="ВСЕ ЗАВИСИТ ТОЛЬКО ОТ ТЕБЯ НА ПОЛЕ БОЯ!" textFill="WHITE" visible="false">
                      <font>
-                        <Font name="Arial Narrow Bold" size="36.0" />
+                        <Font size="36.0" />
                      </font>
                   </Label>
                   <Label layoutX="261.0" layoutY="690.0" text="РАЗЛИЧНЫЕ ВЕТКИ ПРОКАЧКИ КАЖДОЙ ТЕХНИКИ" textAlignment="CENTER" textFill="WHITE" visible="false" wrapText="true">
                      <font>
-                        <Font name="Arial Narrow Bold" size="36.0" />
+                        <Font size="36.0" />
                      </font>
                   </Label>
                   <Label layoutX="596.0" layoutY="740.0" text="ДИНАМИЧЕСКАЯ ЗОНА БОЕВЫХ ДЕЙСТВИЙ." textFill="WHITE" visible="false">
                      <font>
-                        <Font name="Arial Narrow Bold" size="36.0" />
+                        <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label layoutX="203.0" layoutY="45.0" prefHeight="40.0" text="ОБНОВЛЕННЫЙ РЕЖИМ &quot;СТАЛЬНОЙ ОХОТНИК&quot;" textAlignment="CENTER" textFill="WHITE">
+                  <Label layoutX="154.0" layoutY="40.0" prefHeight="40.0" text="ОБНОВЛЕННЫЙ РЕЖИМ &quot;СТАЛЬНОЙ ОХОТНИК&quot;" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="Arial Narrow Bold" size="36.0" />
+                        <Font size="40.0" />
                      </font>
                   </Label>
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutY="688.0" prefHeight="50.0" prefWidth="1280.0" text="ОБШИРНЫЙ ПАРК ТЕХНИКИ НЕ НУЖЕН. ПРОСТО ИГРАЙ!" textFill="WHITE">
                      <font>
-                        <Font name="Arial Narrow Bold" size="40.0" />
+                        <Font size="40.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
             <Pane layoutY="1840.0" prefHeight="920.0" prefWidth="1280.0">
                <children>
-                  <Label layoutX="162.0" text="ЗАСЛУЖЕННАЯ НАГРАДА ДЛЯ КАЖДОГО ТАНКИСТА!" textAlignment="CENTER" textFill="WHITE">
+                  <Label layoutX="109.0" text="ЗАСЛУЖЕННАЯ НАГРАДА ДЛЯ КАЖДОГО ТАНКИСТА!" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="Arial Narrow Bold" size="36.0" />
+                        <Font size="40.0" />
                      </font>
                   </Label>
                   <Button fx:id="wdrBtn" alignment="CENTER" layoutX="490.0" layoutY="418.0" mnemonicParsing="false" onMouseClicked="#onWdrBtnClick" prefHeight="85.0" prefWidth="300.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: white; -fx-border-radius: 10px; -fx-border-width: 3px;" text="УЗНАТЬ ПОДРОБНЕЕ" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font size="24.0" />
                      </font>
                   </Button>
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutY="641.0" prefHeight="50.0" prefWidth="1280.0" text="В ЭТОМ ГОДУ ВСЕ ПОЛУЧАТ МНОЖЕСТВО ЦЕННЫХ ПРИЗОВ" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="Arial Narrow Bold" size="40.0" />
+                        <Font size="40.0" />
                      </font>
                   </Label>
                </children>
@@ -141,19 +141,19 @@
                         <Image url="@Media/bg_kb.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="404.0" layoutY="65.0" text="КОНСТРУКТОРСКОЕ БЮРО" textFill="WHITE">
+                  <Label layoutX="377.0" layoutY="65.0" text="КОНСТРУКТОРСКОЕ БЮРО" textFill="WHITE">
                      <font>
-                        <Font name="Arial Narrow Bold" size="36.0" />
+                        <Font size="40.0" />
                      </font>
                   </Label>
                   <Button fx:id="kbBtn" alignment="CENTER" layoutX="490.0" layoutY="600.0" mnemonicParsing="false" onMouseClicked="#onKbBtnClick" prefHeight="85.0" prefWidth="300.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: white; -fx-border-radius: 10px; -fx-border-width: 3px;" text="УЗНАТЬ ПОДРОБНЕЕ" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font size="24.0" />
                      </font>
                   </Button>
                   <Label layoutY="767.0" prefWidth="1280.0" text="ИСПОЛЬЗУЙ НАКОПЛЕННЫЕ РЕСУРСЫ ДЛЯ ПОЛУЧЕНИЯ УНИКАЛЬНЫХ ТАНКОВ X УРОВНЯ!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font name="Arial Narrow Bold" size="36.0" />
+                        <Font size="40.0" />
                      </font>
                   </Label>
                </children>

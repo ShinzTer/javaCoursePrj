@@ -24,25 +24,6 @@ public class InfoPageKbController {
     protected Button kbAuthor;
 
     @FXML
-    protected void onKbAuthorClick() {
-        kbAuthor.getScene().getWindow().hide();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/com/course/courseproject/author_page.fxml"));
-
-        try {
-            loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        Parent root = loader.getRoot();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root, 1000, 625));
-        stage.setResizable(false);
-        stage.show();
-    }
-
-    @FXML
     protected void onKbBackClick() {
             kbBack.getScene().getWindow().hide();
 
@@ -76,7 +57,7 @@ public class InfoPageKbController {
 
         Parent root = loader.getRoot();
         Stage stage = new Stage();
-        stage.setScene(new Scene(root, 600, 500));
+        stage.setScene(new Scene(root, 600, 600));
         stage.setResizable(false);
         stage.show();
     }
@@ -99,5 +80,24 @@ public class InfoPageKbController {
             stage.setScene(new Scene(root, 1294.401, 820));
             stage.setResizable(false);
             stage.show();
+    }
+
+    @FXML
+    protected void onKbAuthorClick() {
+        kbAuthor.getScene().getWindow().hide();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/com/course/courseproject/author_page.fxml"));
+
+        try {
+            loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root, 1000, 625));
+        stage.setResizable(false);
+        stage.show();
     }
 }

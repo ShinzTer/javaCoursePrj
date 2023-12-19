@@ -57,7 +57,7 @@ public class InfoPageL7Controller {
 
         Parent root = loader.getRoot();
         Stage stage = new Stage();
-        stage.setScene(new Scene(root, 600, 500));
+        stage.setScene(new Scene(root, 600, 600));
         stage.setResizable(false);
         stage.show();
     }

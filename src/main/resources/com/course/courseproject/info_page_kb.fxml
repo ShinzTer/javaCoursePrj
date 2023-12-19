@@ -5,26 +5,26 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.InfoPageKbController">
+<VBox stylesheets="@style/styleAdditionalPage.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.InfoPageKbController">
    <children>
       <Pane prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: rgb(0,0,0,1);">
          <children>
-            <Button fx:id="kbBack" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onKbBackClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="← Назад" textFill="WHITE">
+            <Button fx:id="kbBack" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onKbBackClick" prefHeight="50.0" prefWidth="200.0" text="← Назад" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="kbFeedback" layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onKbFeedbackClick" prefHeight="50.0" prefWidth="165.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Оставить отзыв" textFill="WHITE">
+            <Button fx:id="kbFeedback" layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onKbFeedbackClick" prefHeight="50.0" prefWidth="165.0" text="Оставить отзыв" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="kbMain" layoutX="390.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onKbMainClick" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="На главную" textFill="WHITE">
+            <Button fx:id="kbMain" layoutX="390.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onKbMainClick" prefHeight="50.0" prefWidth="500.0" text="На главную" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="kbAuthor" layoutX="900.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onKbAuthorClick" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Об авторе" textFill="WHITE">
+            <Button fx:id="kbAuthor" layoutX="900.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onKbAuthorClick" prefHeight="50.0" prefWidth="180.0" text="Об авторе" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -42,7 +42,7 @@
                               <Image url="@Media/assembly_shop_3_1920x900.jpg" />
                            </image>
                         </ImageView>
-                        <Label alignment="TOP_LEFT" layoutX="75.0" layoutY="460.0" prefHeight="110.0" prefWidth="760.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="Конструкторское бюро: Кратко о главном Особенности события" textFill="WHITE" wrapText="true">
+                        <Label alignment="TOP_LEFT" layoutX="75.0" layoutY="460.0" prefHeight="110.0" prefWidth="760.0" styleClass="labelTitle" text="Конструкторское бюро: Кратко о главном Особенности события" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="Arial Narrow Bold" size="36.0" />
                            </font>
@@ -56,7 +56,7 @@
                               <Image url="@Media/portal_background_MT_800.jpg" />
                            </image>
                         </ImageView>
-                        <Label layoutX="75.0" layoutY="30.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="Новое событие «Конструкторское бюро» предоставит игрокам новый способ получения уникальных танков 10 уровня" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="30.0" prefWidth="1130.0" text="Новое событие «Конструкторское бюро» предоставит игрокам новый способ получения уникальных танков 10 уровня" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="Arial" size="24.0" />
                            </font>
@@ -66,22 +66,22 @@
                               <Image url="@Media/textBorder.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="75.0" layoutY="260.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Данный запуск, как и сам наградной танк - уже третий по счёту, а следовательно данное событие проверено временем, однако игрокам, которые ещё кропотливо считают свои ресурсы мы рекомендуем воздержаться от этого события" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="260.0" prefWidth="1130.0" text="- Данный запуск, как и сам наградной танк - уже третий по счёту, а следовательно данное событие проверено временем, однако игрокам, которые ещё кропотливо считают свои ресурсы мы рекомендуем воздержаться от этого события" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="400.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Первые 20 тысяч игроков, которые осмелятся вложить свои ресурсы смогут получить танк с уникальным стилем и ЛИЧНЫМ номером каждому купившему, вплоть до 20000-ого номера!" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="400.0" prefWidth="1130.0" text="- Первые 20 тысяч игроков, которые осмелятся вложить свои ресурсы смогут получить танк с уникальным стилем и ЛИЧНЫМ номером каждому купившему, вплоть до 20000-ого номера!" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="510.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Танк, представленный в данном конструкторском бюро - Kampfpanzer 07 P(E) обладает большим количеством преимуществ, а значит, является желанным танком в ангаре каждого активного игрока" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="510.0" prefWidth="1130.0" text="- Танк, представленный в данном конструкторском бюро - Kampfpanzer 07 P(E) обладает большим количеством преимуществ, а значит, является желанным танком в ангаре каждого активного игрока" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="630.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Танки данных событий являются экслюзивными с момента их выпуска как минимум пол года, после чего могут быть добавлены в различные ивенты, однако явно не за бесценок. Машины же с уникальными номерами больше продаваться не будут, а следовательно игроки, купившие их в событии получат эту постоянную эксклюзивность" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="630.0" prefWidth="1130.0" text="- Танки данных событий являются экслюзивными с момента их выпуска как минимум пол года, после чего могут быть добавлены в различные ивенты, однако явно не за бесценок. Машины же с уникальными номерами больше продаваться не будут, а следовательно игроки, купившие их в событии получат эту постоянную эксклюзивность" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>

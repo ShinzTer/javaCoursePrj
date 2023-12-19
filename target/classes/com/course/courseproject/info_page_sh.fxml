@@ -5,38 +5,38 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="780.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.InfoPageShController">
+<VBox prefHeight="780.0" stylesheets="@style/styleAdditionalPage.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.InfoPageShController">
    <children>
       <Pane prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: rgb(0,0,0,1);">
          <children>
-            <Button fx:id="shBack" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShBackClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="← Предыдущая" textFill="WHITE">
+            <Button fx:id="shBack" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShBackClick" prefHeight="50.0" prefWidth="200.0" text="← Предыдущая" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="shFeedback" layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShFeedbackClick" prefHeight="50.0" prefWidth="165.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Оставить отзыв" textFill="WHITE">
+            <Button fx:id="shFeedback" layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShFeedbackClick" prefHeight="50.0" prefWidth="165.0" text="Оставить отзыв" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="shMain" layoutX="390.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShMainClick" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="На главную" textFill="WHITE">
+            <Button fx:id="shMain" layoutX="390.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShMainClick" prefHeight="50.0" prefWidth="500.0" text="На главную" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="shAuthor" layoutX="900.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShAuthorClick" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Об авторе" textFill="WHITE">
+            <Button fx:id="shAuthor" layoutX="900.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShAuthorClick" prefHeight="50.0" prefWidth="180.0" text="Об авторе" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="shForward" layoutX="1090.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShForwardClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Следующая →" textFill="WHITE">
+            <Button fx:id="shForward" layoutX="1090.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onShForwardClick" prefHeight="50.0" prefWidth="200.0" text="Следующая →" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <ScrollPane prefHeight="720.0" prefWidth="1294.401">
+      <ScrollPane prefHeight="720.0" prefWidth="1294.401" vvalue="0.13">
          <content>
             <VBox prefHeight="1400.0" prefWidth="1280.0" style="-fx-background-color: rgb(0,0,0,1);">
                <children>
@@ -47,7 +47,7 @@
                               <Image url="@Media/stalnoy_ohotnik__vozrozhdenie_key_art.jpg" />
                            </image>
                         </ImageView>
-                        <Label alignment="TOP_LEFT" layoutX="75.0" layoutY="460.0" pickOnBounds="false" prefHeight="110.0" prefWidth="810.0" scaleShape="false" style="-fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif;" text="Режим «Стальной охотник»: Основы режима Впереди ещё не один турнир!" textFill="WHITE" wrapText="true">
+                        <Label alignment="TOP_LEFT" layoutX="75.0" layoutY="460.0" pickOnBounds="false" prefHeight="110.0" prefWidth="810.0" scaleShape="false" styleClass="labelTitle" text="Режим «Стальной охотник»: Основы режима Впереди ещё не один турнир!" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="Arial Narrow Bold" size="36.0" />
                            </font>
@@ -61,7 +61,7 @@
                               <Image url="@Media/portal_background_MT_800.jpg" />
                            </image>
                         </ImageView>
-                        <Label layoutX="75.0" layoutY="30.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="Режим в жанре «Королевская битва» возвращается! Сражайтесь в одиночку или во взводе на специальных машинах до последнего выжившего" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="30.0" prefWidth="1130.0" text="Режим в жанре «Королевская битва» возвращается! Сражайтесь в одиночку или во взводе на специальных машинах до последнего выжившего" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="Arial" size="24.0" />
                            </font>
@@ -71,22 +71,22 @@
                               <Image url="@Media/textBorder.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="75.0" layoutY="250.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Каждый игрок сможет показать себя, даже если он играет нестабильно - из всех боёв будут выбраны всего 20 лучших, по которым и определится место в таблице призёров" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="250.0" prefWidth="1130.0" text="- Каждый игрок сможет показать себя, даже если он играет нестабильно - из всех боёв будут выбраны всего 20 лучших, по которым и определится место в таблице призёров" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="360.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Бои происходят на трёх картах режима. 3 на 3 километра между двадцатью игроками. Побеждает тот, кто сможет вовремя проявить агрессию и, в тоже время, продолжит внимательно смотреть по сторонам" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="360.0" prefWidth="1130.0" text="- Бои происходят на трёх картах режима. 3 на 3 километра между двадцатью игроками. Побеждает тот, кто сможет вовремя проявить агрессию и, в тоже время, продолжит внимательно смотреть по сторонам" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="510.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- С каждым патчем в режиме обновляется цепочка общих и ежедневных задач. Что бы пройти общую цепочку задач, нужно накопить стальные печати. Они в свою очередь являются дополнительной наградой каждого из 4-х ежедневных заданий разного уровня сложности" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="510.0" prefWidth="1130.0" text="- С каждым патчем в режиме обновляется цепочка общих и ежедневных задач. Что бы пройти общую цепочку задач, нужно накопить стальные печати. Они в свою очередь являются дополнительной наградой каждого из 4-х ежедневных заданий разного уровня сложности" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="650.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Так же в режим можно играть и вмсесте со своим напарником. Бои будут проходить немного по другим правилам: Всего на карту выходят 10 взводов по 2 игрока; Задачи ежедневной прогрессии будут адаптированы под взводный формат." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="650.0" prefWidth="1130.0" text="- Так же в режим можно играть и вмсесте со своим напарником. Бои будут проходить немного по другим правилам: Всего на карту выходят 10 взводов по 2 игрока; Задачи ежедневной прогрессии будут адаптированы под взводный формат." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>

@@ -1,0 +1,17 @@
+.label {
+    -fx-font-size: 24;
+    -fx-font-family: Arial Narrow;
+    -fx-font-weight: Bold;
+    -fx-text-fill: white;
+}
+
+.labelTitle {
+    -fx-font-size: 28;
+    -fx-effect:  dropshadow( gaussian , rgba(0,0,0,1) , 1,1,0,2.5 );
+}
+
+.radio-button {
+    -fx-font-size: 18;
+    -fx-font-family: Arial Narrow;
+    -fx-font-weight: Bold;
+}

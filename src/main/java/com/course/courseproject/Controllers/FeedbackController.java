@@ -18,22 +18,23 @@ public class FeedbackController {
     protected Button sendFeedbackBtn;
 
     @FXML
-    protected RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rbFavourite1, rbFavourite2, rbFavourite3, rbFavourite4;
-
-    @FXML
-    protected TextArea textAreaL7, textAreaSh, textAreaWdr, textAreaKb;
+    protected RadioButton rb1, rb2, rb3, rb4, rb5, rb6,
+            rbL7True,rbL7False,rbL7Idk,
+            rbShTrue,rbShFalse,rbShIdk,
+            rbWdrTrue,rbWdrFalse,rbWdrIdk,
+            rbKbTrue,rbKbFalse,rbKbIdk,
+            rbFavourite1, rbFavourite2, rbFavourite3, rbFavourite4;
 
     protected int chosen = 0;
+    protected int chosenL7 = 2;
+    protected int chosenSh = 2;
+    protected int chosenWdr = 2;
+    protected int chosenKb = 2;
     protected int favouriteChosen = 0;
     protected User user;
-    protected Feedback feedback;
 
     protected void getUser(User user) {
         this.user = user;
-    }
-
-    protected void getFeedback(Feedback feedback) {
-        this.feedback = feedback;
     }
 
     @FXML
@@ -46,10 +47,34 @@ public class FeedbackController {
     }
 
     @FXML
+    protected void isChosenL7() {
+        chosenL7 = rbL7True.isSelected() ? 0 :
+                rbL7False.isSelected() ? 1 : 2;
+    }
+
+    @FXML
+    protected void isChosenSh() {
+        chosenSh = rbShTrue.isSelected() ? 0 :
+                rbShFalse.isSelected() ? 1 : 2;
+    }
+
+    @FXML
+    protected void isChosenWdr() {
+        chosenWdr = rbWdrTrue.isSelected() ? 0 :
+                rbWdrFalse.isSelected() ? 1 : 2;
+    }
+
+    @FXML
+    protected void isChosenKb() {
+        chosenKb = rbKbTrue.isSelected() ? 0 :
+                rbKbFalse.isSelected() ? 1 : 2;
+    }
+
+    @FXML
     protected void isFavouriteChosen() {
-        favouriteChosen = rbFavourite1.isSelected() ? 0 :
-                rbFavourite2.isSelected() ? 1 :
-                        rbFavourite3.isSelected() ? 2 : 3;
+        favouriteChosen = rbFavourite2.isSelected() ? 1 :
+                rbFavourite3.isSelected() ? 2 :
+                        rbFavourite4.isSelected() ? 3 : 0;
     }
 
     @FXML
@@ -59,10 +84,10 @@ public class FeedbackController {
 
         fb.setIduser(user.getIdUser());
         fb.setQ1(chosen);
-        fb.setQ2(textAreaL7.getText());
-        fb.setQ3(textAreaSh.getText());
-        fb.setQ4(textAreaWdr.getText());
-        fb.setQ5(textAreaKb.getText());
+        fb.setQ2(chosenL7);
+        fb.setQ3(chosenSh);
+        fb.setQ4(chosenWdr);
+        fb.setQ5(chosenKb);
         fb.setQ6(favouriteChosen);
 
         dbHandler.sendFeedback(fb);

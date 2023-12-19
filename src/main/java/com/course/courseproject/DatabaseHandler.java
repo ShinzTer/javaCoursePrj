@@ -73,10 +73,10 @@ public class DatabaseHandler extends Configs {
                 PreparedStatement prSt = getDbConnection().prepareStatement(insert);
                 prSt.setInt(1, feedback.getIduser());
                 prSt.setInt(2, feedback.getQ1());
-                prSt.setString(3, feedback.getQ2());
-                prSt.setString(4, feedback.getQ3());
-                prSt.setString(5, feedback.getQ4());
-                prSt.setString(6, feedback.getQ5());
+                prSt.setInt(3, feedback.getQ2());
+                prSt.setInt(4, feedback.getQ3());
+                prSt.setInt(5, feedback.getQ4());
+                prSt.setInt(6, feedback.getQ5());
                 prSt.setInt(7, feedback.getQ6());
 
                 prSt.executeUpdate();
@@ -97,10 +97,10 @@ public class DatabaseHandler extends Configs {
                 prSt.setInt(1, feedback.getIduser());
                 prSt.setInt(8, feedback.getIduser());
                 prSt.setInt(2, feedback.getQ1());
-                prSt.setString(3, feedback.getQ2());
-                prSt.setString(4, feedback.getQ3());
-                prSt.setString(5, feedback.getQ4());
-                prSt.setString(6, feedback.getQ5());
+                prSt.setInt(3, feedback.getQ2());
+                prSt.setInt(4, feedback.getQ3());
+                prSt.setInt(5, feedback.getQ4());
+                prSt.setInt(6, feedback.getQ5());
                 prSt.setInt(7, feedback.getQ6());
 
                 prSt.executeUpdate();

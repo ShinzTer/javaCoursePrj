@@ -5,31 +5,31 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="780.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.InfoPageWdrController">
+<VBox prefHeight="780.0" stylesheets="@style/styleAdditionalPage.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.InfoPageWdrController">
    <children>
       <Pane prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: rgb(0,0,0,1);">
          <children>
-            <Button fx:id="wdrBack" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onWdrBackClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="← Предыдущая" textFill="WHITE">
+            <Button fx:id="wdrBack" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onWdrBackClick" prefHeight="50.0" prefWidth="200.0" text="← Предыдущая" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="wdrFeedback" layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onWdrFeedbackClick" prefHeight="50.0" prefWidth="165.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Оставить отзыв" textFill="WHITE">
+            <Button fx:id="wdrFeedback" layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onWdrFeedbackClick" prefHeight="50.0" prefWidth="165.0" text="Оставить отзыв" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="wdrMain" layoutX="390.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onWdrMainClick" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="На главную" textFill="WHITE">
+            <Button fx:id="wdrMain" layoutX="390.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onWdrMainClick" prefHeight="50.0" prefWidth="500.0" text="На главную" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="wdrAuthor" layoutX="900.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onWdrAuthorClick" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Об авторе" textFill="WHITE">
+            <Button fx:id="wdrAuthor" layoutX="900.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onWdrAuthorClick" prefHeight="50.0" prefWidth="180.0" text="Об авторе" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="wdrForward" layoutX="1090.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onWdrForwardClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif; -fx-border-color: white; -fx-border-radius: 8px; -fx-border-width: 1px;" text="Следующая →" textFill="WHITE">
+            <Button fx:id="wdrForward" layoutX="1090.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#onWdrForwardClick" prefHeight="50.0" prefWidth="200.0" text="Следующая →" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -47,7 +47,7 @@
                               <Image url="@Media/well_deserved_award_1920x900.jpg" />
                            </image>
                         </ImageView>
-                        <Label alignment="TOP_LEFT" layoutX="75.0" layoutY="460.0" pickOnBounds="false" prefHeight="110.0" prefWidth="860.0" scaleShape="false" style="-fx-font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif;" text="Заслуженная награда: Новый год - новый танк! Подробнее о наградах" textFill="WHITE" wrapText="true">
+                        <Label alignment="TOP_LEFT" layoutX="75.0" layoutY="460.0" pickOnBounds="false" prefHeight="110.0" prefWidth="860.0" scaleShape="false" styleClass="labelTitle" text="Заслуженная награда: Новый год - новый танк! Подробнее о наградах" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="Arial Narrow Bold" size="36.0" />
                            </font>
@@ -61,7 +61,7 @@
                               <Image url="@Media/portal_background_MT_800.jpg" />
                            </image>
                         </ImageView>
-                        <Label layoutX="75.0" layoutY="30.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="У нашей игры вновь пребавился год, а значит пора это отмечать - Заходите в игру и получайте свою заслуженную награду и тот самый танк!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="30.0" prefWidth="1130.0" text="У нашей игры вновь пребавился год, а значит пора это отмечать - Заходите в игру и получайте свою заслуженную награду и тот самый танк!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="Arial" size="24.0" />
                            </font>
@@ -71,22 +71,22 @@
                               <Image url="@Media/textBorder.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="75.0" layoutY="250.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Каждый игрок при первом входе в игру получит награды, соответствующие его выслуге лет и те танки, которые он еще не получал в предыдущие годы заслуженной награды" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="250.0" prefWidth="1130.0" text="- Каждый игрок при первом входе в игру получит награды, соответствующие его выслуге лет и те танки, которые он еще не получал в предыдущие годы заслуженной награды" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="370.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- В этом году наша игра &quot;Мир танков&quot; отмечает первый подобный праздник, поэтому награды игроков, которые в нашем проекте только год, будут сравнимы с призами ветеранов. Однако танки, что выдавались в предыдущие года будут выдаваться соответственно вашему году выслуги, вплоть до 6 лет" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="370.0" prefWidth="1130.0" text="- В этом году наша игра &quot;Мир танков&quot; отмечает первый подобный праздник, поэтому награды игроков, которые в нашем проекте только год, будут сравнимы с призами ветеранов. Однако танки, что выдавались в предыдущие года будут выдаваться соответственно вашему году выслуги, вплоть до 6 лет" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="550.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Мы в том числе будем рады приветствовать всех тех игроков, что по какой-либо причине перестали посещать наш проект. Игра преобрела множество улучшений за время вашего отсутствия" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="550.0" prefWidth="1130.0" text="- Мы в том числе будем рады приветствовать всех тех игроков, что по какой-либо причине перестали посещать наш проект. Игра преобрела множество улучшений за время вашего отсутствия" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="75.0" layoutY="660.0" prefWidth="1130.0" style="-fx-font-family: &quot;Roboto&quot;,&quot;Arial Narrow&quot;,Arial,sans-serif;" text="- Игроки, которые только начали играть в наш проект тоже не остануться без наград! Пусть и в меньшем количестве, но они получат свои награды для облегченного преодаления порога вхождения" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label layoutX="75.0" layoutY="660.0" prefWidth="1130.0" text="- Игроки, которые только начали играть в наш проект тоже не остануться без наград! Пусть и в меньшем количестве, но они получат свои награды для облегченного преодаления порога вхождения" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>

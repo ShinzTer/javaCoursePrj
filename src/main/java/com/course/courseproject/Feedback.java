@@ -3,10 +3,10 @@ package com.course.courseproject;
 public class Feedback {
     private int iduser;
     private int q1;
-    private String q2;
-    private String q3;
-    private String q4;
-    private String q5;
+    private int q2;
+    private int q3;
+    private int q4;
+    private int q5;
     private int q6;
 
     public int getIduser() {
@@ -25,35 +25,35 @@ public class Feedback {
         this.q1 = q1;
     }
 
-    public String getQ2() {
+    public int getQ2() {
         return q2;
     }
 
-    public void setQ2(String q2) {
+    public void setQ2(int q2) {
         this.q2 = q2;
     }
 
-    public String getQ3() {
+    public int getQ3() {
         return q3;
     }
 
-    public void setQ3(String q3) {
+    public void setQ3(int q3) {
         this.q3 = q3;
     }
 
-    public String getQ4() {
+    public int getQ4() {
         return q4;
     }
 
-    public void setQ4(String q4) {
+    public void setQ4(int q4) {
         this.q4 = q4;
     }
 
-    public String getQ5() {
+    public int getQ5() {
         return q5;
     }
 
-    public void setQ5(String q5) {
+    public void setQ5(int q5) {
         this.q5 = q5;
     }
 
