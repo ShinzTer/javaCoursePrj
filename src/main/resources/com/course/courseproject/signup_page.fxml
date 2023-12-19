@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="500.0" prefWidth="600.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.SignUpController">
+<VBox prefHeight="600.0" prefWidth="600.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.courseproject.Controllers.SignUpController">
    <children>
       <Pane prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: rgba(0,0,0,0.95);">
          <children>
@@ -21,36 +26,51 @@
             </Button>
          </children>
       </Pane>
-      <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #504c63;">
+      <Pane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #504c63;">
          <children>
-            <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="513.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Media/portal_background_MT_600x400.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="264.0" layoutY="20.0" text="Логин" textFill="WHITE">
+            <Label layoutX="264.0" layoutY="5.0" text="Логин" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="loginField" layoutX="200.0" layoutY="60.0" prefHeight="40.0" prefWidth="200.0" />
-            <Label layoutX="255.0" layoutY="120.0" text="Пароль">
+            <TextField fx:id="loginField" layoutX="200.0" layoutY="45.0" prefHeight="40.0" prefWidth="200.0" />
+            <Label layoutX="255.0" layoutY="126.0" text="Пароль">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <PasswordField fx:id="passField" layoutX="200.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0" />
-            <Label layoutX="158.0" layoutY="220.0" text="Подтверждение пароля">
+            <PasswordField fx:id="passField" layoutX="200.0" layoutY="166.0" prefHeight="40.0" prefWidth="200.0" />
+            <Label layoutX="158.0" layoutY="247.0" text="Подтверждение пароля">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <PasswordField fx:id="passConfField" layoutX="200.0" layoutY="260.0" prefHeight="40.0" prefWidth="200.0" />
-            <Button fx:id="signUpBtn" layoutX="150.0" layoutY="320.0" mnemonicParsing="false" onMouseClicked="#signUpBtnClicked" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: white; -fx-border-radius: 10px; -fx-border-width: 3px;" text="Зарегистрироваться" textFill="WHITE">
+            <PasswordField fx:id="passConfField" layoutX="200.0" layoutY="287.0" prefHeight="40.0" prefWidth="200.0" />
+            <Button fx:id="signUpBtn" layoutX="150.0" layoutY="402.0" mnemonicParsing="false" onMouseClicked="#signUpBtnClicked" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-border-color: white; -fx-border-radius: 10px; -fx-border-width: 3px;" text="Зарегистрироваться" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Button>
+            <Label fx:id="emptyField1" layoutX="230.0" layoutY="91.0" text="Логин не введен" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="emptyField2" layoutX="225.0" layoutY="214.0" text="Пароль не введен" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="incorrectLabel" layoutX="212.0" layoutY="343.0" text="Пароль не совпадает" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>
