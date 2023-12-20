@@ -130,4 +130,23 @@ public class DatabaseHandler extends Configs {
         }
         return false;
     }
+
+    public boolean getUserById(User user) {
+        String select = "SELECT * FROM " + UserConst.USER_TABLE + " WHERE " +
+                UserConst.USERS_LOGIN + "=?";
+
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setString(1, user.getLogin());
+            ResultSet resultSet = prSt.executeQuery();
+            if (resultSet.next()) {
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        return false;
+    }
 }

@@ -25,12 +25,12 @@ public class FeedbackController {
             rbKbTrue,rbKbFalse,rbKbIdk,
             rbFavourite1, rbFavourite2, rbFavourite3, rbFavourite4;
 
-    protected int chosen = 0;
-    protected int chosenL7 = 2;
-    protected int chosenSh = 2;
-    protected int chosenWdr = 2;
-    protected int chosenKb = 2;
-    protected int favouriteChosen = 0;
+    protected int chosen = 10;
+    protected int chosenL7 = 10;
+    protected int chosenSh = 10;
+    protected int chosenWdr = 10;
+    protected int chosenKb = 10;
+    protected int favouriteChosen = 10;
     protected User user;
 
     protected void getUser(User user) {
@@ -44,30 +44,40 @@ public class FeedbackController {
                         rb3.isSelected() ? 2 :
                                 rb4.isSelected() ? 3 :
                                         rb5.isSelected() ? 4 : 5;
+        sendFeedbackBtn.setText("Отправить отзыв");
+        sendFeedbackBtn.setStyle("-fx-text-fill: white");
     }
 
     @FXML
     protected void isChosenL7() {
         chosenL7 = rbL7True.isSelected() ? 0 :
                 rbL7False.isSelected() ? 1 : 2;
+        sendFeedbackBtn.setText("Отправить отзыв");
+        sendFeedbackBtn.setStyle("-fx-text-fill: white");
     }
 
     @FXML
     protected void isChosenSh() {
         chosenSh = rbShTrue.isSelected() ? 0 :
                 rbShFalse.isSelected() ? 1 : 2;
+        sendFeedbackBtn.setText("Отправить отзыв");
+        sendFeedbackBtn.setStyle("-fx-text-fill: white");
     }
 
     @FXML
     protected void isChosenWdr() {
         chosenWdr = rbWdrTrue.isSelected() ? 0 :
                 rbWdrFalse.isSelected() ? 1 : 2;
+        sendFeedbackBtn.setText("Отправить отзыв");
+        sendFeedbackBtn.setStyle("-fx-text-fill: white");
     }
 
     @FXML
     protected void isChosenKb() {
         chosenKb = rbKbTrue.isSelected() ? 0 :
                 rbKbFalse.isSelected() ? 1 : 2;
+        sendFeedbackBtn.setText("Отправить отзыв");
+        sendFeedbackBtn.setStyle("-fx-text-fill: white");
     }
 
     @FXML
@@ -75,6 +85,8 @@ public class FeedbackController {
         favouriteChosen = rbFavourite2.isSelected() ? 1 :
                 rbFavourite3.isSelected() ? 2 :
                         rbFavourite4.isSelected() ? 3 : 0;
+        sendFeedbackBtn.setText("Отправить отзыв");
+        sendFeedbackBtn.setStyle("-fx-text-fill: white");
     }
 
     @FXML
@@ -90,12 +102,19 @@ public class FeedbackController {
         fb.setQ5(chosenKb);
         fb.setQ6(favouriteChosen);
 
-        dbHandler.sendFeedback(fb);
+        if(fb.getQ1() == 10 || fb.getQ2() == 10 || fb.getQ3() == 10 || fb.getQ4() == 10 || fb.getQ5() == 10 || fb.getQ6() == 10) {
+            sendFeedbackBtn.setText("Пожалуйста, оставьте свой полный отзыв!");
+            sendFeedbackBtn.setStyle("-fx-text-fill: red");
+        } else {
 
-        sendFeedbackBtn.setText("Спасибо за ваш отзыв!");
-        sendFeedbackBtn.setOnMouseClicked(e -> {
-            Stage stage = (Stage) sendFeedbackBtn.getScene().getWindow();
-            stage.close();
-        });
+            dbHandler.sendFeedback(fb);
+
+            sendFeedbackBtn.setText("Спасибо за ваш отзыв!");
+            sendFeedbackBtn.setStyle("-fx-text-fill: green");
+            sendFeedbackBtn.setOnMouseClicked(e -> {
+                Stage stage = (Stage) sendFeedbackBtn.getScene().getWindow();
+                stage.close();
+            });
+        }
     }
 }

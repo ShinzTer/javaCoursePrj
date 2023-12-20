@@ -28,7 +28,7 @@ public class SignUpController {
     protected TextField passConfField;
 
     @FXML
-    protected Label incorrectLabel, emptyField1, emptyField2;
+    protected Label incorrectLabel, emptyField1, emptyField2, incorrectLogin;
 
     @FXML
     protected Button signUpBtn;
@@ -71,7 +71,7 @@ public class SignUpController {
         if (password.isEmpty()){
             emptyField2.setVisible(true);
         }
-        if(!login.isEmpty() && !password.isEmpty()) {
+        if(!login.isEmpty() && !password.isEmpty() && !dbHandler.getUserById(user)) {
             if (passField.getText().equals(passConfField.getText())) {
                 dbHandler.signUpUser(user);
 
@@ -95,12 +95,18 @@ public class SignUpController {
                 passField.setText("");
                 passConfField.setText("");
             }
+        } else {
+            incorrectLogin.setVisible(true);
+            loginField.setText("");
+            passField.setText("");
+            passConfField.setText("");
         }
     }
 
     @FXML
     protected void labelHideLogin() {
         emptyField1.setVisible(false);
+        incorrectLogin.setVisible(false);
     }
 
     @FXML
